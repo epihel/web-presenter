@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Web Presenter</title>
+<!-- if you know CSS, you can change the styles in 'web-presenter.css' -->
+<link href="resources/web-presenter.css" rel="stylesheet" type="text/css"/>
+
+<style type="text/css">
+/* if want a specific width and height, replace '100%' with '300px,' for example */
+div.content-wrapper {
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+<!-- web-presenter.js uses jQuery -->
+<script type="text/javascript" src="resources/jquery-1.11.0.min.js"></script>
+
+<!-- web-presenter.js contains the logic of the slide-show: a file you never need to look at: it just works -->
+<script type="text/javascript" src="resources/web-presenter.js"></script>
+</head>
+<body>
+
+<!-- each slide is loaded into this wrapper -->
+<div class="content-wrapper">
+	<div class="content-cell">
+		<div id="content"></div>
+	</div>
+</div>
+
+<!--	define your slides here:
+		the order of the slides in the HTML determines the order of the slide show;
+		the only requirement is that the container has the class 'slide' -->
+<div class="slide">
+	<h1>Web Presenter</h1>
+	<h2>Create Awesome Presentations with Text, Images, Code, and External URLs</h2>
+	<ul style="margin: auto; width: 350px">
+		<li>Requires knowledge of a little bit of HTML.</li>
+		<li>Use left and right arrows on your keyboard to navigate previous and next in the slideshow.</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Text Example</h1>
+	<div style="margin: auto; width: 500px">
+		<p>With just a little bit of knowledge of HTML, you can create slide-show presentations that utilize anything that modern browsers can do.</p>
+		<p>This is cooler than PowerPoint, isn't it?  Yeah; thought so.</p>
+	</div>
+</div>
+
+<!-- put your images in the 'img' folder -->
+<div class="slide">
+	<h1>Image Example</h1>
+	<h2>Don't Let This Happen to You</h2>
+	<div><img src="img/sleep.jpg" width="400" height="267" border="0" /></div>
+</div>
+
+<!-- if you know JavaScript, you can create interactive slides: this is a webpage after all -->
+<div class="slide">
+	<h1>Code Example</h1>
+	<script type="text/javascript">
+	function changeBg() {
+		$('#js-bg').css('background-color', 'green');
+	}
+	</script>
+	<div id="js-bg" style="cursor: pointer; margin: auto; width: 250px" onclick="changeBg()">Click to change background-color with JavaScript.</div>
+</div>
+
+<!-- put your external URLs into an iframe -->
+<div class="slide">
+	<h1>External URL Example</h1>
+	<iframe src="http://www.lightcages.com"></iframe>
+</div>
+
+<!-- every slide show ends with "Questions?," doesn't it? -->
+<div class="slide">
+	<div><img src="img/sunburst.png" width="226" height="180" border="0" /></div>
+	<h1>Questions?</h1>
+</div>
+</body>
+</html>
+  
